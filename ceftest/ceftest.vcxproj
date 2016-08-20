@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\cef\Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\cef\Release</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Users\fangwei\Desktop\ceftest\ceftest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Users\fangwei\Desktop\ceftest\ceftest\cef\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;libcef.lib;libcef_dll_wrapper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Users\fangwei\Desktop\ceftest\ceftest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;libcef_dll_wrapper.lib;libcef.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\fangwei\Desktop\ceftest\ceftest\cef\Release;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cefclient\browser\binding_test.cc" />
+    <ClCompile Include="cefclient\browser\browser_window.cc" />
+    <ClCompile Include="cefclient\browser\browser_window_osr_win.cc" />
+    <ClCompile Include="cefclient\browser\browser_window_std_win.cc" />
+    <ClCompile Include="cefclient\browser\bytes_write_handler.cc" />
+    <ClCompile Include="cefclient\browser\client_app_browser.cc" />
+    <ClCompile Include="cefclient\browser\client_app_delegates_browser.cc" />
+    <ClCompile Include="cefclient\browser\client_handler.cc" />
+    <ClCompile Include="cefclient\browser\client_handler_osr.cc" />
+    <ClCompile Include="cefclient\browser\client_handler_std.cc" />
+    <ClCompile Include="cefclient\browser\dialog_test.cc" />
+    <ClCompile Include="cefclient\browser\geometry_util.cc" />
+    <ClCompile Include="cefclient\browser\main_context.cc" />
+    <ClCompile Include="cefclient\browser\main_context_impl.cc" />
+    <ClCompile Include="cefclient\browser\main_context_impl_win.cc" />
+    <ClCompile Include="cefclient\browser\main_message_loop.cc" />
+    <ClCompile Include="cefclient\browser\main_message_loop_multithreaded_win.cc" />
+    <ClCompile Include="cefclient\browser\main_message_loop_std.cc" />
+    <ClCompile Include="cefclient\browser\osr_dragdrop_win.cc" />
+    <ClCompile Include="cefclient\browser\osr_renderer.cc" />
+    <ClCompile Include="cefclient\browser\osr_window_win.cc" />
+    <ClCompile Include="cefclient\browser\preferences_test.cc" />
+    <ClCompile Include="cefclient\browser\resource_util.cc" />
+    <ClCompile Include="cefclient\browser\resource_util_win.cc" />
+    <ClCompile Include="cefclient\browser\response_filter_test.cc" />
+    <ClCompile Include="cefclient\browser\root_window.cc" />
+    <ClCompile Include="cefclient\browser\root_window_create.cc" />
+    <ClCompile Include="cefclient\browser\root_window_manager.cc" />
+    <ClCompile Include="cefclient\browser\root_window_views.cc" />
+    <ClCompile Include="cefclient\browser\root_window_win.cc" />
+    <ClCompile Include="cefclient\browser\scheme_test.cc" />
+    <ClCompile Include="cefclient\browser\temp_window_win.cc" />
+    <ClCompile Include="cefclient\browser\test_runner.cc" />
+    <ClCompile Include="cefclient\browser\urlrequest_test.cc" />
+    <ClCompile Include="cefclient\browser\util_win.cc" />
+    <ClCompile Include="cefclient\browser\views_window.cc" />
+    <ClCompile Include="cefclient\browser\window_test.cc" />
+    <ClCompile Include="cefclient\browser\window_test_runner.cc" />
+    <ClCompile Include="cefclient\browser\window_test_runner_views.cc" />
+    <ClCompile Include="cefclient\browser\window_test_runner_win.cc" />
+    <ClCompile Include="cefclient\cefclient_app.cpp" />
+    <ClCompile Include="cefclient\cefclient_handler.cpp" />
+    <ClCompile Include="cefclient\cefclient_handler_win.cpp" />
+    <ClCompile Include="cefclient\cefview.cpp" />
+    <ClCompile Include="cefclient\common\client_app.cc" />
+    <ClCompile Include="cefclient\common\client_app_delegates_common.cc" />
+    <ClCompile Include="cefclient\common\client_app_other.cc" />
+    <ClCompile Include="cefclient\common\client_switches.cc" />
+    <ClCompile Include="cefclient\common\scheme_test_common.cc" />
+    <ClCompile Include="cefclient\renderer\client_app_delegates_renderer.cc" />
+    <ClCompile Include="cefclient\renderer\client_app_renderer.cc" />
+    <ClCompile Include="cefclient\renderer\client_renderer.cc" />
+    <ClCompile Include="cefclient\renderer\performance_test.cc" />
+    <ClCompile Include="cefclient\renderer\performance_test_tests.cc" />
+    <ClCompile Include="cefclient\window_test.cpp" />
+    <ClCompile Include="ceftest.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_ceftest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtcef3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_ceftest.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ceftest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtcef3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="json.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="qtcef3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ceftest.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ceftest.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\fangwei\Desktop\ceftest\ceftest\include" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ceftest.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\fangwei\Desktop\ceftest\ceftest\include" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ceftest.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cefclient\browser\binding_test.h" />
+    <ClInclude Include="cefclient\browser\browser_window.h" />
+    <ClInclude Include="cefclient\browser\browser_window_osr_win.h" />
+    <ClInclude Include="cefclient\browser\browser_window_std_win.h" />
+    <ClInclude Include="cefclient\browser\bytes_write_handler.h" />
+    <ClInclude Include="cefclient\browser\client_app_browser.h" />
+    <ClInclude Include="cefclient\browser\client_handler.h" />
+    <ClInclude Include="cefclient\browser\client_handler_osr.h" />
+    <ClInclude Include="cefclient\browser\client_handler_std.h" />
+    <ClInclude Include="cefclient\browser\client_types.h" />
+    <ClInclude Include="cefclient\browser\dialog_test.h" />
+    <ClInclude Include="cefclient\browser\geometry_util.h" />
+    <ClInclude Include="cefclient\browser\main_context.h" />
+    <ClInclude Include="cefclient\browser\main_context_impl.h" />
+    <ClInclude Include="cefclient\browser\main_message_loop.h" />
+    <ClInclude Include="cefclient\browser\main_message_loop_multithreaded_win.h" />
+    <ClInclude Include="cefclient\browser\main_message_loop_std.h" />
+    <ClInclude Include="cefclient\browser\osr_dragdrop_events.h" />
+    <ClInclude Include="cefclient\browser\osr_dragdrop_win.h" />
+    <ClInclude Include="cefclient\browser\osr_renderer.h" />
+    <ClInclude Include="cefclient\browser\osr_window_win.h" />
+    <ClInclude Include="cefclient\browser\preferences_test.h" />
+    <ClInclude Include="cefclient\browser\resource.h" />
+    <ClInclude Include="cefclient\browser\resource_util.h" />
+    <ClInclude Include="cefclient\browser\response_filter_test.h" />
+    <ClInclude Include="cefclient\browser\root_window.h" />
+    <ClInclude Include="cefclient\browser\root_window_manager.h" />
+    <ClInclude Include="cefclient\browser\root_window_views.h" />
+    <ClInclude Include="cefclient\browser\root_window_win.h" />
+    <ClInclude Include="cefclient\browser\scheme_test.h" />
+    <ClInclude Include="cefclient\browser\temp_window.h" />
+    <ClInclude Include="cefclient\browser\temp_window_win.h" />
+    <ClInclude Include="cefclient\browser\test_runner.h" />
+    <ClInclude Include="cefclient\browser\urlrequest_test.h" />
+    <ClInclude Include="cefclient\browser\util_win.h" />
+    <ClInclude Include="cefclient\browser\views_window.h" />
+    <ClInclude Include="cefclient\browser\window_test.h" />
+    <ClInclude Include="cefclient\browser\window_test_runner.h" />
+    <ClInclude Include="cefclient\browser\window_test_runner_views.h" />
+    <ClInclude Include="cefclient\browser\window_test_runner_win.h" />
+    <ClInclude Include="cefclient\cefclient_app.h" />
+    <ClInclude Include="cefclient\cefclient_handler.h" />
+    <ClInclude Include="cefclient\cefview.h" />
+    <ClInclude Include="cefclient\common\client_app.h" />
+    <ClInclude Include="cefclient\common\client_app_other.h" />
+    <ClInclude Include="cefclient\common\client_switches.h" />
+    <ClInclude Include="cefclient\common\scheme_test_common.h" />
+    <ClInclude Include="cefclient\renderer\client_app_renderer.h" />
+    <ClInclude Include="cefclient\renderer\client_renderer.h" />
+    <ClInclude Include="cefclient\renderer\performance_test.h" />
+    <ClInclude Include="cefclient\renderer\performance_test_setup.h" />
+    <ClInclude Include="cefclient\window_test.h" />
+    <ClInclude Include="GeneratedFiles\ui_ceftest.h" />
+    <ClInclude Include="json.h" />
+    <CustomBuild Include="qtcef3.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qtcef3.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\fangwei\Desktop\ceftest\ceftest\include" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qtcef3.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\fangwei\Desktop\ceftest\ceftest\include" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ceftest.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cefclient\resources\binding.html" />
+    <None Include="cefclient\resources\dialogs.html" />
+    <None Include="cefclient\resources\draggable.html" />
+    <None Include="cefclient\resources\localstorage.html" />
+    <None Include="cefclient\resources\osr_test.html" />
+    <None Include="cefclient\resources\other_tests.html" />
+    <None Include="cefclient\resources\pdf.html" />
+    <None Include="cefclient\resources\pdf.pdf" />
+    <None Include="cefclient\resources\performance.html" />
+    <None Include="cefclient\resources\performance2.html" />
+    <None Include="cefclient\resources\preferences.html" />
+    <None Include="cefclient\resources\response_filter.html" />
+    <None Include="cefclient\resources\transparency.html" />
+    <None Include="cefclient\resources\urlrequest.html" />
+    <None Include="cefclient\resources\window.html" />
+    <None Include="cefclient\resources\xmlhttprequest.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="cefclient\resources\logo.png" />
+    <Image Include="cefclient\resources\menu_icon.1x.png" />
+    <Image Include="cefclient\resources\menu_icon.2x.png" />
+    <Image Include="cefclient\resources\window_icon.1x.png" />
+    <Image Include="cefclient\resources\window_icon.2x.png" />
+    <Image Include="cefclient\resources\win\cefclient.ico" />
+    <Image Include="cefclient\resources\win\small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="cefclient\resources\win\cefclient.exe.manifest" />
+    <Manifest Include="cefclient\resources\win\compatibility.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cefclient\resources\win\cefclient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="cefclient\resources\win\README-TRANSFER.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="5.5" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
