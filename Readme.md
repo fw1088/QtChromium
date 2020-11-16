@@ -1,5 +1,5 @@
 # 开发环境
-vs2012 + addin   qt5.5  libcef
+VS2012 + addin   Qt5.5  Libcef
 # 注意问题
 使用前需要安装了qt5.5和qt-addin
 如果想自行编译libcef，需要注意的问题是
